@@ -6,7 +6,7 @@ const express = require('express');
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-const conString = 'postgres://kendragon:Zip9tape!@localhost:5432/kilovolt';
+const conString = process.env.DATABASE_URL || 'postgres://kendragon:Zip9tape!@localhost:5432/kilovolt';
 // const conString = 'postgres://nic_century:cjecdC10041929*@localhost:5432/kilovolt';
 
 const client = new pg.Client(conString);
